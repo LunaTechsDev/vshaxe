@@ -62,6 +62,12 @@
 		"configuration": {
 			"title": "Haxe",
 			"properties": {
+				"haxe.hxmlGlobPattern": {
+					"scope": "resource",
+					"markdownDescription": "Glob pattern to search for .hxml files in the workspace",
+					"default": "*.hxml",
+					"type": "string"
+				},
 				"haxe.executable": {
 					"scope": "resource",
 					"markdownDescription": "Path to the Haxe executable or an object containing a Haxe executable configuration",

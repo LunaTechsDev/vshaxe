@@ -22,7 +22,10 @@ class HxmlDiscovery {
 		didChangeFilesEmitter = new EventEmitter();
 		files = mementos.getDefault(folder, DiscoveredFilesKey, []);
 
-		final pattern = new RelativePattern(folder, "*.hxml");
+		final globConfig = workspace.getConfiguration('haxe').get('hxmlGlobPattern');
+		final globPattern = globConfig == null ? '*.hxml' : globConfig;
+
+		final pattern = new RelativePattern(folder, globPattern);
 		fileWatcher = workspace.createFileSystemWatcher(pattern, false, true, false);
 		fileWatcher.onDidCreate(uri -> {
 			files.push(pathRelativeToRoot(uri));
