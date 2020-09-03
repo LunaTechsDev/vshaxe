@@ -62,9 +62,9 @@
 		"configuration": {
 			"title": "Haxe",
 			"properties": {
-				"haxe.hxmlPath": {
+				"haxe.hxmlGlobPattern": {
 					"scope": "resource",
-					"markdownDescription": "Global pattern to search for .hxml files.",
+					"markdownDescription": "Glob pattern to search for .hxml files in the workspace",
 					"default": "*.hxml",
 					"type": "string"
 				},

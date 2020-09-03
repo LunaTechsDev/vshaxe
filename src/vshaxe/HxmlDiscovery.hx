@@ -22,7 +22,7 @@ class HxmlDiscovery {
 		didChangeFilesEmitter = new EventEmitter();
 		files = mementos.getDefault(folder, DiscoveredFilesKey, []);
 
-		final globConfig = workspace.getConfiguration('haxe').get('hxmlPath');
+		final globConfig = workspace.getConfiguration('haxe').get('hxmlGlobPattern');
 		final globPattern = globConfig == null ? '*.hxml' : globConfig;
 
 		final pattern = new RelativePattern(folder, globPattern);
